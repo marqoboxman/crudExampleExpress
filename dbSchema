@@ -1,0 +1,23 @@
+// *****************************
+// Table for the taxpayers info
+// *****************************
+
+CREATE TABLE IF NOT EXISTS contribuyentes(
+    razSoc VARCHAR(60) NOT NULL,
+    rfcUsuario VARCHAR(13) NOT NULL,
+    email VARCHAR(40) NOT NULL,
+    idUsuario INT UNSIGNED NOT NULL,
+    PRIMARY KEY(razSoc, rfcUsuario )
+);
+
+// *************************
+// Table for the users info
+// *************************
+
+CREATE TABLE IF NOT EXISTS usuarios(
+    idUsuario INT UNSIGNED NOT NULL,
+    nombreUsuario VARCHAR(60) NOT NULL,
+    email VARCHAR(40) NOT NULL,
+    password VARCHAR (200),
+    PRIMARY KEY(idUsuario, nombreUsuario)
+);
